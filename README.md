@@ -23,4 +23,4 @@
 
 1. **Descarga o clona** este repositorio:
    ```sh
-   git clone https://github.com/tuusuario/bingo-respin.git
+   git clone https://github.com/hiericho/bingo.git
