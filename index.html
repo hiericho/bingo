@@ -11,38 +11,51 @@
         <h1>Bingo ReSpin</h1>
     </header>
     <main>
-        <section class="players-section">
-            <h2>Jugadores</h2>
-            <form id="player-form" autocomplete="off">
-                <div class="input-group">
-                    <input type="text" id="player-name" placeholder="Nombre del jugador" maxlength="16" required>
-                    <button type="submit">Agregar</button>
+        <div class="main-top">
+            <section class="players-section">
+                <h2>Jugadores</h2>
+                <form id="player-form" autocomplete="off">
+                    <div class="input-group">
+                        <input type="text" id="player-name" placeholder="Nombre del jugador" maxlength="16" required>
+                        <button type="submit">Agregar</button>
+                    </div>
+                </form>
+                <div id="players-list"></div>
+            </section>
+            <section class="center-section">
+                <div class="tombola-container">
+                    <div id="winner-banner" class="oculto"></div>
+                    <div class="tombola-wrapper">
+                        <canvas id="tombola-canvas" width="230" height="230"></canvas>
+                        <img id="logo-respin" src="torbellino.svg" alt="Logo ReSpin" />
+                        <div id="numero-sorteado"></div>
+                    </div>
+                    <button id="sortear-btn">¡Girar y sacar número!</button>
+                    <button id="reset-btn" class="reset-btn">Resetear juego</button>
                 </div>
-            </form>
-            <div id="players-list"></div>
-        </section>
-
-        <section class="center-section">
-            <div class="tombola-container">
-                <div id="winner-banner" class="oculto"></div>
-                <div class="tombola-wrapper">
-                    <canvas id="tombola-canvas" width="230" height="230"></canvas>
-                    <img id="logo-respin" src="torbellino.svg" alt="Logo ReSpin" />
-                    <div id="numero-sorteado"></div>
-                </div>
-                <button id="sortear-btn">¡Girar y sacar número!</button>
-                <button id="reset-btn" class="reset-btn">🔄 Resetear juego</button>
-            </div>
-        </section>
-
+            </section>
+            <section class="side-section"></section>
+        </div>
         <section class="cartones-section">
             <h2>Cartones</h2>
             <div id="cartones-list"></div>
         </section>
     </main>
     <footer>
-        <p> &copy; 2025</p>
+        <p>Hiericho © 2025 | Estética inspirada en ReSpin.com</p>
     </footer>
+
+    <!-- POPUP GANADOR -->
+    <div id="winner-modal" class="winner-modal oculto">
+        <div class="winner-modal-content">
+            <h2>¡Bingo!</h2>
+            <div id="winner-modal-name"></div>
+            <button id="winner-modal-close">Cerrar</button>
+        </div>
+    </div>
+    <!-- Confetti canvas -->
+    <canvas id="confetti-canvas" class="oculto"></canvas>
+
     <script src="script.js"></script>
 </body>
 </html>
